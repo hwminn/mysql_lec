@@ -1,0 +1,11 @@
+-- 작성된 쿼리문 실행하는 방법 
+-- 1.블록 잡고 ctrl + enter
+-- 2.페이지 전체 실행은 블록없이 Ctrl +Shift +Enter 
+
+-- 스크립트 파일 (.sql) 실행하는 방법 (MYSQL SHELL 활용)
+-- 1. MYSQL SHELL 열기 
+-- 2. 사용자 접속하기 : mysql -u 사용자명 -p 패스워드 입력 
+-- 3. 접속 성공하면 MYSQL  SHELL 로 진입함
+-- mysql> 이면 성공 
+-- 4. 스크립트 파일 실행 명령 내리기 
+-- mysql> source/path/
