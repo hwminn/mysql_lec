@@ -5,8 +5,8 @@ USE testdb;
     테이블 삭제와 생성 순서는 항상 역순으로 작업한다. 
 */
 -- 테이블 삭제하기 
-DROP TABLE IF EXISTS tbl_order CASCADE; -- 참조 중인 테이블이 존재하면 함께삭제하는 CASCADE 옵션을 추가한다 
-DROP TABLE IF EXISTS tbl_product CASCADE;
+DROP TABLE IF EXISTS tbl_order ;
+DROP TABLE IF EXISTS tbl_product ;
 
 -- 테이블 만들기 
 CREATE TABLE IF NOT EXISTS tbl_product
