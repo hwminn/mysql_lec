@@ -58,4 +58,4 @@ CREATE TABLE IF NOT EXISTS tbl_proj_emp
     CONSTRAINT pk_proj_emp PRIMARY KEY(reg_id),
     CONSTRAINT fk_emp_projemp FOREIGN KEY(emp_id) REFERENCES tbl_employee(emp_id),
     CONSTRAINT fk_proj_projemp FOREIGN KEY(proj_id) REFERENCES tbl_project(proj_id)
-) ENGINE=InnoDB COMMENT '프로젝트사원';employee_tbl
+) ENGINE=InnoDB COMMENT '프로젝트사원';
