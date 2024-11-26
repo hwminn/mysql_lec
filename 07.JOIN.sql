@@ -37,8 +37,8 @@ GROUP BY location;
 /*USE db_menu;
 SELECT menu_code, menu_name,menu_price,category_name,orderable_status
   FROM tbl_category c INNER JOIN tbl_menu m 
-    ON  c.category_code= m.category_code;*/ 
-    
+    ON  c.category_code= m.category_code;*/
+
 /* OUTER JOIN */
 -- 어느 한 테이블만 가지고 있는 데이터를 조회할 때 사용. 
 -- LEFT [OUTER] JOIN: 첫 번째 테이블 (왼쪽에 있음)의 모든 데이터는 항상 조회되는 방식. 
@@ -49,4 +49,13 @@ SELECT dept_name, COUNT(emp_id)
   FROM tbl_department d LEFT JOIN tbl_employee e
     ON d.dept_id =e.dept_id
 GROUP BY d.dept_id, dept_name;
+
+/*SELF JOIN*/
+-- 테이블 하나를 대상으로 행과 행 사이관계를 찾는 조인 
+-- 8. 카테고리 이름과 상위 카테고리 이름 조회하기 
+USE db_menu;
+SELECT b.category_name AS 상위카테고리, a.category_name AS 카테고리
+ FROM tbl_category a INNER JOIN tbl_category b
+   ON a.ref_category_code=b.category_code
+WHERE a.ref_category_code IS NOT NULL;
 
